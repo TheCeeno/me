@@ -1,0 +1,362 @@
+body{
+	overflow-y: scroll; overflow-x:hidden; 
+	margin:0;
+	background:url("img/menu.png");
+}
+
+@font-face{
+  font-family:mj;
+  src:url("fonts/Mj flow.ttf");
+}
+
+@font-face{
+  font-family:is;
+  src:url("fonts/Iranian Sans.ttf");
+}
+
+@font-face{
+  font-family:sogand;
+  src:url("fonts/SOGAND.ttf");
+}
+
+@font-face{
+  font-family:af;
+  src:url("fonts/AFSANEH.ttf");
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #D00355; 
+}
+
+
+#Menu{
+	z-index:99;
+	transition:0.8s;
+	border-left:10px solid #D00355;
+	width:230px;
+	height:100vh;
+	float:right;
+	background:url("img/menu.png");
+	
+	position:sticky;
+	position: -webkit-fixed;
+	top:0px;
+	box-shadow:0px 0px 2px;
+}
+
+#Menu > .menuArrow{
+	transition:0.8s;
+	background:url("img/right.png") no-repeat 50% 50%;
+	width:20px;
+	height:30px;
+	background-color:#D00355;
+	
+	position:absolute;
+	top:40px;
+	right:230px;
+	border-radius:1px;
+	cursor:pointer;
+}
+
+#Menu > .items{
+//border:1px solid red;
+height:510px;
+width:210px;
+
+position:relative;
+left:0px;
+top:50px;
+}
+
+#Menu > .logo{
+	position:relative;
+	top:30px;
+	left:45px;
+	cursor:pointer;
+}
+
+#Menu > .items > .menu > a{
+	transition:0.3s;
+	text-decoration:none;
+	font-family:mj;
+	color:#BDBDBD;
+}
+
+#Menu > .items > .menu > .buy{
+background: linear-gradient( to right,#0B4C5F 5%,transparent 20% );
+background-size: 200% 100%;
+background-position: right bottom;
+transition: all ease .8s;
+border-radius:2px;
+}
+
+#Menu > .items > .menu > .buy:hover{
+	background-position: left bottom;
+	color: white;
+}
+
+#Menu > .items > .menu:hover,#Menu > .items > .menu:hover > a,#Menu > .items > .menu:hover > span{
+	background-position: left bottom;
+	color: white;
+}
+
+#Menu > .items > .menu{
+	height:35px;
+	width:100%;
+	//background:blue;
+	text-align:right;
+	line-height:32px;
+	margin-bottom:2px;
+	padding-right:15px;
+	box-sizing:border-box;
+	
+	background: linear-gradient( to left,transparent 50%,#D00355 50% );
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all linear .3s;
+	cursor:pointer;
+}
+
+#Menu > .items > .menu > span{
+	transition:0.3s;
+	position:absolute;
+	left:15px;
+	color:#BDBDBD;
+	font-family:mj;
+	font-size:12px;
+}
+
+
+#Menu > .items > #overm:hover > .onhover{
+opacity:1;
+visibility:visible;
+}
+
+#Menu > .items > #overm > .onhover{
+visibility:hidden;
+transition: 0.3s;
+opacity:0;
+background:url("img/menu.png");
+width:200px;
+//height:200px;
+//border:1px solid red;
+	position:absolute;
+	top:37px;
+	right:220px;
+	text-align:right;
+}
+
+#Menu > .items > #overm > .onhover > a:hover{
+	background-position: left bottom;
+	color: white;
+}
+
+#Menu >  .items > #overm > .onhover > a{
+	height:35px;
+	display:block;
+	text-decoration:none;
+	//background:yellow;
+	width:100%;
+	line-height:33px;
+	margin-bottom:2px;
+	padding-right:15px;
+	box-sizing:border-box;
+	font-family:mj;
+	font-size:14px;
+	color:#BDBDBD;
+	
+	background: linear-gradient( to left,transparent 50%,#D00355 50% );
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all linear .2s;
+	cursor:pointer;
+}
+
+#Menu > .botMenu{
+	cursor:pointer;
+	line-height:32px;
+	border-top:5px dashed #D00355;
+	border-bottom:5px dashed #D00355;
+	transition:1s;
+	width:100%;
+	height:70px;
+	position:absolute;
+	bottom:20px;
+	white-space:nowrap;
+	color:#fff;
+	font-family:mj;
+	text-align:center;
+	font-size:14px;
+}
+
+
+
+#content{
+	height:1200px;
+	margin:0 auto;
+}
+
+#content > .imagez{
+	height:450px;
+	border-top:4px solid #D00355;
+	border-bottom:4px solid #D00355;
+	margin:0 auto;
+}
+
+
+
+#content > .imagez > #holder{
+	margin:auto;
+	//border:1px solid #ccc;
+	width:900px;
+	height:auto;
+	position:relative;
+	right:70px;
+	}
+	
+	#content > .imagez > #holder > p{
+	text-align:center;
+	color:#fff;
+	font-family:mj;
+	font-size:18px;
+	line-height:10px;
+	animation-duration: 3s;
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
+}
+	
+#content > .imagez > #holder > img{
+	border:1px solid transparent;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	width:400px;
+	border-radius:1000px;
+	cursor:pointer;
+	margin-top:40px;
+}
+
+#content > .imagez > #holder > img:hover{
+-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+#content > .imagez > #holder > .filter{
+	transition:0.8s;
+	border:2px solid #D00355;
+	text-align:right;
+	width:600px;
+	height:40px;
+	font-family:mj;
+	
+	position:relative;
+	top:5px;
+	left:150px;
+	border-radius:50px;
+	text-indent:20px;
+	outline:none;
+	box-sizing:border-box;
+	padding-right:20px;
+}
+
+#content > .imagez > #holder > .filter:focus{
+	border:2px solid green;
+}
+
+#content > .imagez > #holder > .filter:focus ~ .search{
+	background-color:green;
+}
+#content > .imagez > #holder > .search{
+	transition:0.8s;
+	background:url("img/search.png") no-repeat 50%;
+	width:40px;
+	height:40px;
+	position:relative;
+	top:-35px;
+	left:151px;
+	border-radius:50%;
+	cursor:pointer;
+}
+
+
+#content > .imagez > .info{
+	//border:1px solid red;
+	width:800px;
+	height:100px;
+	margin:auto;
+	
+	position:relative;
+	top:-23px;
+	right:70px;
+}
+
+#content > .imagez > .info > .item:hover{
+	background-color:#B5E5CF;
+	box-shadow:2px 2px #3D5B59;
+}
+
+#content > .imagez > .info > .item:hover .topP ,#content > .imagez > .info > .item:hover  .botP{
+	color:#A44757;
+}
+
+#content > .imagez > .info > .item{
+	transition:0.5s;
+	cursor:pointer;
+	//border:1px solid green;
+	height:100%;
+	width:23%;
+	float:right;
+	margin-left:10px;
+	background-color:#543855;
+	border-radius:2px;
+	box-shadow:2px 2px #ccc;
+}
+
+#content > .imagez > .info > .item > img{
+	position:relative;
+	top:17px;
+	float:right;
+	right:10px;
+}
+
+#content > .imagez > .info > .item > .topP{
+	color:#fff;
+	font-family:is;
+	border-bottom:2px solid #FF8882;
+	padding-bottom:5px;
+	width:60px;
+	text-align:right;
+	
+	position:relative;
+	left:40px;
+}
+
+#content > .imagez > .info > .item > .botP{
+	text-align:right;
+	color:#fff;
+	font-family:is;
+	padding-bottom:5px;
+	width:120px;
+	font-size:12px;
+	
+	position:relative;
+	right:10px;
+	top:-5px;
+}
+
+
+
+
+
+
+
+
+
+
+	
+	
